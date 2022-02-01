@@ -1,0 +1,9 @@
+<%- include("header") -%> <!--EJS Header layout-->
+<div class="myDiv">
+    <h1><%=title%></h1>
+    <p><%=textArea%></p>
+    <form action="/delete" method="post">
+        <button type="submit" name="getTitleDeleteBtn" value="<%=title%>">Delete Post</button>
+    </form>
+</div>
+<%- include("footer") -%> <!--EJS Header layout-->

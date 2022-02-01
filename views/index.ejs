@@ -1,0 +1,16 @@
+<%- include("header") -%> <!--EJS Header layout-->
+    <div class="myDiv">
+        <h1>Home</h1>
+        <p style="margin-top: 5%">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit est non eum accusantium asperiores hic maiores voluptatibus error tempore quia, perferendis ab aliquid ullam a quis eveniet dolore quod totam nesciunt aspernatur, delectus repudiandae sed aut culpa. Quo cumque possimus, id eveniet sint ab recusandae veniam eius inventore omnis temporibus doloribus, voluptas nisi sequi debitis error sunt doloremque provident iusto. Ea eaque temporibus dolor dolore aperiam corrupti excepturi rem reprehenderit cupiditate harum hic iure omnis est, voluptatibus unde laborum quaerat provident voluptatum natus minima ipsa. Ratione repellat saepe quis consectetur impedit perspiciatis, in esse, iste debitis quod earum neque sed?</p>
+        <%for(let i=0;i<posts.length;i++){%>
+           
+                <h1><%=i+1%>) <%=posts[i].title%></h1>
+                <p>
+                    <%=posts[i].textArea.substring(0,100)+"..."%> <!--Truncating the content
+                                                                     inside the textarea to 100 words-->
+                    <a href="/posts/<%=posts[i].title%>">Read More</a>
+                </p>
+           
+        <%}%>
+    </div> 
+<%- include("footer") -%> <!--EJS Footer layout-->
